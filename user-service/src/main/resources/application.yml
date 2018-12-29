@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: user-service
+  zipkin:
+    base-url: http://cloud-zipkin-server/
+  sleuth:
+    sampler:
+      probability: 1.0
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 20
+  client:
+    service-url:
+      defaultZone: http://cloud-eureka-server:8761/eureka
